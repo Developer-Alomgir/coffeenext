@@ -1,18 +1,21 @@
-# Coffee Mama — Next.js + Three.js
+# Coffee Mama — Next.js + Three.js (v2)
 
 Developer: Alomgir Hossen
 
-This project is a port of the user's HTML demo into a Next.js (App Router) project ready to deploy on Vercel.
+This v2 update includes:
+- Winter background (snow particles, cold fog)
+- Stage/interior/decorative lights and improved shader settings
+- Improved OrbitControls tuning for smoother touch and desktop controls
+- Mobile responsive adjustments
+- Procedural placeholder 3D models added: coffee machine, oven, cooker, glass, bottle, plate, fruits
+- Placeholder high-render 'Tom Cat' shopkeeper made from primitives (replaceable with GLTF)
+- Bangla shop banner "কফি মামা" with subtitle
+- New pages: /portfolio, /projects, /info, /contact
 
-## How to run locally
+### Replacing placeholders with GLTF models
+Place your GLTF/GLB files under `/public/models` and use `GLTFLoader` from `three/examples/jsm/loaders/GLTFLoader` to load them inside `components/Scene.js`. We intentionally used procedural placeholders to avoid licensing issues and to keep repo small.
 
+### Run locally
 1. `npm install`
 2. `npm run dev`
 3. Open http://localhost:3000
-
-## Notes
-- Three.js scene lives in `components/Scene.js`.
-- No external GLTF models were downloaded; the scene uses procedural/high-poly geometry (lathe, more segments).
-- Images referenced in original layout use remote Unsplash URLs; you may copy them into `/public` if you want offline asset packaging.
-
-Enjoy! — Alomgir Hossen
